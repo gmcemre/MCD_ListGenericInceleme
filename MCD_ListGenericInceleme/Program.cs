@@ -53,6 +53,28 @@ namespace MCD_ListGenericInceleme
             bool kontrol1 = sayilarim.Any();
             bool kontrol2 = sayilarim.Any(i => i>5); //5 elemanını içeriyor mu?
 
+            sayilarim.Sort(); //A-Z sıralama
+            sayilarim.Reverse(); //Z-A sıralama
+
+            int enYuksekDeger = sayilarim.Max();
+            int enDusukDeger = sayilarim.Min();
+            int toplamDeger= sayilarim.Sum();
+            Console.WriteLine(enYuksekDeger );
+            Console.WriteLine(enDusukDeger  );
+            Console.WriteLine(toplamDeger  );
+
+            //Uygulama Alanı => Bölüm
+            //List<T> Uygulama - Windows Form
+
+            bool silmeIslemiSonuc = sayilarim.Remove(100); //100 elemanını sil
+            int silinenAded = sayilarim.RemoveAll(i => i > 3); //3 ten büyük olanları sil
+            sayilarim.RemoveAt(2);//2.index e sahip elemanı sil
+            
+            sayilarim.Clear();
+
+            
+
+
             Console.ReadKey();
 
         }
