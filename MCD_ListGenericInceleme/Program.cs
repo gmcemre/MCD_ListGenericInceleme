@@ -39,6 +39,20 @@ namespace MCD_ListGenericInceleme
             int capacity = sayilarim.Capacity;
             int count = sayilarim.Count;
 
+            //Soru ? = sayilarim koleksiyonu içerisinde bulunan datayı ekrana yazdırmak istiyorum.Bunu nasıl yapaarsınız.
+
+            sayilarim.ForEach(i => Console.WriteLine(i));
+            // => :  ilgili koleksiyon içerisinde arama yap
+            // => linq konusu List<T> içerisinde
+
+            int bulunanDeger = sayilarim[3];
+            Console.WriteLine("List<T> koleksiyonu içerisinde 3. index te bulunan değer : {0}",bulunanDeger );
+
+            sayilarim.Insert(3, 100); //3.index e 100 ekledik
+
+            bool kontrol1 = sayilarim.Any();
+            bool kontrol2 = sayilarim.Any(i => i>5); //5 elemanını içeriyor mu?
+
             Console.ReadKey();
 
         }
